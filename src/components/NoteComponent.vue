@@ -48,7 +48,7 @@ defineProps<{
   width: 300px;
   height: 285px;
   padding: 30px;
-  margin: 30px;
+  margin: 20px;
   .title {
     @include text($weight: bold);
   }
