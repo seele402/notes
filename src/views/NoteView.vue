@@ -20,6 +20,12 @@ defineProps<{
 </script>
 
 <style lang="scss" scoped>
+* {
+  margin-left: 20px;
+}
+a {
+  margin-left: 0px;
+}
 header {
   font-size: 50px;
   font-weight: bold;
