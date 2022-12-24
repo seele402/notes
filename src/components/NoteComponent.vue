@@ -76,4 +76,24 @@ defineProps<{
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .note-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .note-container {
+    width: 90%;
+    .button-container {
+      .open-button {
+        min-width: fit-content;
+      }
+      .delete-button {
+        min-width: fit-content;
+      }
+    }
+  }
+}
 </style>

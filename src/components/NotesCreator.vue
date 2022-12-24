@@ -42,7 +42,7 @@ const description = ref("");
   @include styles.defaultButton(
     $background-color: #2c6bfc,
     $color: white,
-    $width: 135px,
+    $width: 135px
   );
 }
 </style>
