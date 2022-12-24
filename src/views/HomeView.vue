@@ -16,10 +16,12 @@ header {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 15px;
+  margin-left: 20px;
 }
 .mainContainer {
   display: flex;
   .notes-creator-container {
+    margin-left: 20px;
     font-size: 30px;
     flex: 1.5;
   }
