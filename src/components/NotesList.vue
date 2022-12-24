@@ -1,17 +1,16 @@
 <template>
   <div class="notes-container">
-    <NoteComponent
+    <NoteListItem
       v-for="(note, key) in notesStore.notes"
       :key="key"
       :id="key"
-      :title="note.title"
-      :description="note.description"
+      :note="note"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import NoteComponent from "./NoteComponent.vue";
+import NoteListItem from "./NoteListItem.vue";
 import { useNotesStore } from "../stores/notes";
 const notesStore = useNotesStore();
 </script>

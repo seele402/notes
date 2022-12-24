@@ -1,10 +1,10 @@
 <template>
   <div class="note-container">
     <header class="title">
-      {{ title }}
+      {{ note.title }}
     </header>
     <p class="description">
-      {{ description }}
+      {{ note.description }}
     </p>
     <footer class="button-container">
       <button
@@ -25,8 +25,7 @@ import { useNotesStore } from "../stores/notes";
 const notesStore = useNotesStore();
 defineProps<{
   id: number;
-  title: string;
-  description?: string;
+  note: { title: string; description: string };
 }>();
 </script>
 

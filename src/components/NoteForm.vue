@@ -3,9 +3,7 @@
   <input class="title-input" v-model="title" />
   <p class="description">Описание</p>
   <textarea class="description-input" v-model="description"></textarea>
-  <button class="add-button" @click="notesStore.addNote(title, description)">
-    Добавить
-  </button>
+  <button class="add-button" @click="onAddClick()">Добавить</button>
 </template>
 
 <script setup lang="ts">
@@ -14,6 +12,12 @@ import { useNotesStore } from "../stores/notes";
 const notesStore = useNotesStore();
 const title = ref("");
 const description = ref("");
+
+const onAddClick = () => {
+  notesStore.addNote(title.value, description.value);
+  title.value = "";
+  description.value = "";
+};
 </script>
 
 <style lang="scss" scoped>

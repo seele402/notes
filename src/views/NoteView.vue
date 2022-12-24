@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <a @click="$router.push({ name: 'homePage' })">Главная</a> /
+    <router-link :to="{ name: 'homePage' }">Главная</router-link> /
     {{ notesStore.notes[id].title }}
   </nav>
   <header>

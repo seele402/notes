@@ -1,5 +1,6 @@
 import { ref, watch } from "vue";
 import { defineStore } from "pinia";
+import type { Note } from "../types/Note";
 
 export const useNotesStore = defineStore("notesStore", () => {
   const notes = ref<Note[]>([]);
@@ -12,11 +13,11 @@ export const useNotesStore = defineStore("notesStore", () => {
   };
 
   if (localStorage.getItem("notes")) {
-    notes.value = JSON.parse(localStorage.getItem("notes") || "{}")._value;
+    notes.value = JSON.parse(localStorage.getItem("notes") || "{}");
   }
 
   watch(
-    () => notes,
+    () => notes.value,
     (state) => {
       localStorage.setItem("notes", JSON.stringify(state));
     },
@@ -26,7 +27,4 @@ export const useNotesStore = defineStore("notesStore", () => {
   return { notes, addNote, deleteNote };
 });
 
-type Note = {
-  title: string;
-  description: string;
-};
+

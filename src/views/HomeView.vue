@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import NotesCreator from "../components/NotesCreator.vue";
+import NotesCreator from "../components/NoteForm.vue";
 import NotesList from "../components/NotesList.vue";
 </script>
 
