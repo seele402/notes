@@ -1,22 +1,24 @@
 <template>
   <nav>
     <router-link :to="{ name: 'homePage' }">Главная</router-link> /
-    {{ notesStore.notes[id].title }}
+    {{ notes.title }}
   </nav>
   <header>
-    {{ notesStore.notes[id].title }}
+    {{ notes.title }}
   </header>
   <div>
-    {{ notesStore.notes[id].description }}
+    {{ notes.description }}
   </div>
 </template>
 
 <script setup lang="ts">
 import { useNotesStore } from "../stores/notes";
-const notesStore = useNotesStore();
-defineProps<{
+import { computed } from "vue";
+const props = defineProps<{
   id: number;
 }>();
+const notesStore = useNotesStore();
+const notes = computed(() => notesStore.notes[props.id]);
 </script>
 
 <style lang="scss" scoped>

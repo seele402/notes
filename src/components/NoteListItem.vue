@@ -21,11 +21,12 @@
 </template>
 
 <script lang="ts" setup>
+import type { Note } from "@/types/Note";
 import { useNotesStore } from "../stores/notes";
 const notesStore = useNotesStore();
 defineProps<{
   id: number;
-  note: { title: string; description: string };
+  note: Note;
 }>();
 </script>
 
