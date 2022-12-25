@@ -25,6 +25,9 @@ const notes = computed(() => notesStore.notes[props.id]);
 * {
   margin-left: 20px;
 }
+nav {
+  margin-top: 40px;
+}
 a {
   margin-left: 0px;
 }

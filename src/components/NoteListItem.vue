@@ -7,25 +7,15 @@
       {{ note.description }}
     </p>
     <footer class="button-container">
-      <button
-        class="open-button"
-        @click="$router.push({ name: 'notePage', params: { id: id } })"
-      >
-        Открыть
-      </button>
-      <button class="delete-button" @click="notesStore.deleteNote(id)">
-        Удалить
-      </button>
+      <button class="open-button" @click="$emit('open')">Открыть</button>
+      <button class="delete-button" @click="$emit('delete')">Удалить</button>
     </footer>
   </div>
 </template>
 
 <script lang="ts" setup>
 import type { Note } from "@/types/Note";
-import { useNotesStore } from "../stores/notes";
-const notesStore = useNotesStore();
 defineProps<{
-  id: number;
   note: Note;
 }>();
 </script>

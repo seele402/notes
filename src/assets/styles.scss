@@ -1,6 +1,6 @@
 @use "./variables.scss" as variables;
 
-html *{
+* {
     font-size: variables.$global-font-size;
     font-family: arial;
 }

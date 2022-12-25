@@ -15,6 +15,7 @@ import NotesList from "../components/NotesList.vue";
 header {
   font-size: 50px;
   font-weight: bold;
+  margin-top: 40px;
   margin-bottom: 15px;
   margin-left: 20px;
 }

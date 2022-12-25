@@ -26,5 +26,3 @@ export const useNotesStore = defineStore("notesStore", () => {
 
   return { notes, addNote, deleteNote };
 });
-
-

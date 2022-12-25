@@ -3,8 +3,9 @@
     <NoteListItem
       v-for="(note, key) in notesStore.notes"
       :key="key"
-      :id="key"
       :note="note"
+      @open="$router.push({ name: 'notePage', params: { id: key } })"
+      @delete="notesStore.deleteNote(key)"
     />
   </div>
 </template>
