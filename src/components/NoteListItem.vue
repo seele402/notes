@@ -25,6 +25,7 @@ defineProps<{
 @use "../assets/variables.scss" as variables;
 @mixin text($weight: normal) {
   font-weight: $weight;
+  word-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -75,7 +76,9 @@ defineProps<{
 }
 @media screen and (max-width: 400px) {
   .note-container {
-    width: 90%;
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 80vw;
     .button-container {
       .open-button {
         min-width: fit-content;
@@ -83,6 +86,13 @@ defineProps<{
       .delete-button {
         min-width: fit-content;
       }
+    }
+  }
+}
+@media screen and (max-width: 240px) {
+  .note-container {
+    .button-container {
+      flex-flow: column wrap;
     }
   }
 }
