@@ -53,7 +53,7 @@ defineProps<{
       @include styles.defaultButton(
         $color: variables.$open-button-color,
         $width: 35%,
-        $border: solid variables.$open-button-color
+        $border: 1px solid variables.$open-button-color
       );
     }
 
@@ -61,7 +61,7 @@ defineProps<{
       @include styles.defaultButton(
         $color: variables.$delete-button-color,
         $width: 35%,
-        $border: solid variables.$delete-button-color
+        $border: 1px solid variables.$delete-button-color
       );
     }
   }
