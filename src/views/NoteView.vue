@@ -36,8 +36,11 @@ header {
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 30px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 div {
+  word-wrap: break-word;
   white-space: pre-wrap;
 }
 </style>
